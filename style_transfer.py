@@ -166,6 +166,7 @@ for i in range(iterations):
     end_time = time.time()
     print('Iteration %d completed in %ds' % (i, end_time - start_time))
     if i % 10 == 0:
+        # Deprocess the image
         x = x.reshape((height, width, 3))
         x = x[:, :, ::-1]
         x[:, :, 0] += 103.939
@@ -174,17 +175,3 @@ for i in range(iterations):
         x = np.clip(x, 0, 255).astype('uint8')
         img = Image.fromarray(x)
         img.save('Results/result_%d.png' % (i))
-
-
-
-# Deprocess the image
-"""x = x.reshape((height, width, 3))
-x = x[:, :, ::-1]
-x[:, :, 0] += 103.939
-x[:, :, 1] += 116.779
-x[:, :, 2] += 123.68
-x = np.clip(x, 0, 255).astype('uint8')
-
-imgs = Image.fromarray(x)
-imgs.save("Results/result.png")
-imgs.show()"""
