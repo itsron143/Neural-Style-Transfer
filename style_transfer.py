@@ -1,4 +1,4 @@
-"""Generating personalised images using Neural Style Transfer"""
+"""Neural Style Transfer"""
 # Importing all the required packages
 from __future__ import print_function
 from PIL import Image
