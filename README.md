@@ -5,7 +5,9 @@ The paper presents an algorithm for combining the content of one image with the 
 
 ## Usage
 
-`python3 style_transfer.py content.jpg style.jpg`
+```
+$ python3 style_transfer.py content.jpg style.jpg
+```
 
 ## Input
 <p float="left">
